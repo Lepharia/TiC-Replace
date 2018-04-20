@@ -19,10 +19,10 @@ zNode.innerHTML =
         '- TiC Replace -'+
     '</div>'+
     '<div id="bt_Strip" class="tm_button">'+
-        'Sonderzeichen entfernen'+
+        'Sonderzeichen entfernen (STRG+ALT+W)'+
     '</div>'+
     '<div id="bt_Replace" class="tm_button">'+
-        'Abkürzungen auflösen'+
+        'Abkürzungen auflösen (STRG+ALT+E)'+
     '</div>';
 zNode.setAttribute ('id', 'div_TicReplace');
 document.body.appendChild (zNode);
@@ -88,16 +88,16 @@ document.getElementById ("bt_Strip").addEventListener (
 /**Define handler for Hotkeys**/
 document.addEventListener('keyup', doc_keyUp, false);
 
-/**Implements the handler for hotkeys. Stripping is triggered by CTRL+W, Replace by CTRL+E**/
+/**Implements the handler for hotkeys. Stripping is triggered by CTRL+ALT+W, Replace by CTRL+ALT+E**/
 function doc_keyUp(e){
     
     // CTRL + W
-    if(e.ctrlKey && (e.keyCode == 87)){
+    if(e.ctrlKey && e.altKey && (e.keyCode == 87)){
          bt_stripClick(null);       
     }
     
     //CTRL + E
-    if(e.ctrlKey && (e.keyCode == 69)){
+    if(e.ctrlKey && e.altKey && (e.keyCode == 69)){
         bt_replaceClick(null);
     }   
 }
