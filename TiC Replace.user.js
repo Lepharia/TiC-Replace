@@ -118,7 +118,7 @@ function tr_replace(originalString, replaceString) {
     var length = textNodes.snapshotLength;
     var searchRE = new RegExp(originalString, 'gi');
     var i;
-    for (i = 0; i < textNodes.snapshotLength; i + 1) {
+    for (i = 0; i < textNodes.snapshotLength; i++) {
         var node = textNodes.snapshotItem(i);
         node.value = node.value.replace(searchRE, replaceString);
     }
