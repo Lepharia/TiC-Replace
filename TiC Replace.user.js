@@ -2,7 +2,7 @@
 // @name     		TiC Replace
 // @namespace 	    tag:dennis.bonnmann@materna.de
 // @author			Dennis Bonnmann (dennis.bonnmann@materna.de)
-// @version         0.41
+// @version         0.4.2
 // @include			https://myintranet.materna.de/tic/*
 // @include         https://extranet.materna.de/*/tic/*
 // @exclude			https://myintranet.materna.de/tic/report*
@@ -20,10 +20,10 @@ zNode.innerHTML =
         '- TiC Replace -'+
     '</div>'+
     '<div id="bt_Strip" class="tm_button">'+
-        'Sonderzeichen entfernen (STRG+ALT+S)'+
+        'Sonderzeichen entfernen<br>(STRG+ALT+S)'+
     '</div>'+
     '<div id="bt_Replace" class="tm_button">'+
-        'Abkürzungen auflösen (STRG+ALT+R)'+
+        'Abkürzungen auflösen<br>(STRG+ALT+R)'+
     '</div>';
 zNode.setAttribute ('id', 'div_TicReplace');
 document.body.appendChild (zNode);
@@ -89,7 +89,7 @@ document.getElementById ("bt_Strip").addEventListener (
 /**Define handler for Hotkeys**/
 document.addEventListener('keyup', doc_keyUp, false);
 
-/**Implements the handler for hotkeys. Stripping is triggered by CTRL+ALT+W, Replace by CTRL+ALT+E**/
+/**Implements the handler for hotkeys. Stripping is triggered by CTRL+ALT+S, Replace by CTRL+ALT+R**/
 function doc_keyUp(e){
     
     // CTRL + ALT + S
