@@ -85,6 +85,23 @@ document.getElementById ("bt_Strip").addEventListener (
     "click", bt_stripClick, false
 );
 
+/**Define handler for Hotkeys**/
+document.addEventListener('keyup', doc_keyUp, false);
+
+/**Implements the handler for hotkeys. Stripping is triggered by CTRL+W, Replace by CTRL+E**/
+function doc_keyUp(e){
+    
+    // CTRL + W
+    if(e.ctrlKey && (e.keyCode == 87)){
+         bt_stripClick(null);       
+    }
+    
+    //CTRL + E
+    if(e.ctrlKey && (e.keyCode == 69)){
+        bt_replaceClick(null);
+    }   
+}
+
 /**
  * Queries the page for textareas and replaces every occurrence of a string with another
  *
