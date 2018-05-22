@@ -2,7 +2,7 @@
 // @name            TiC Replace
 // @namespace       tag:dennis.bonnmann@materna.de
 // @author          Dennis Bonnmann (dennis.bonnmann@materna.de)
-// @version         0.5.1
+// @version         0.5.2
 // @include         https://myintranet.materna.de/tic/*
 // @include         https://extranet.materna.de/*/tic/*
 // @exclude         https://myintranet.materna.de/tic/report*
@@ -132,6 +132,7 @@ function bt_replaceClick(zEvent) {
      * Routineaufgaben *
     \*******************/
     tr_replace(/\\Ass/, "Erfassen von Asset");
+    tr_replace(/\\Kot/, "Aufstellen eines Konftels");
     tr_replace(/\\Inc/, "Bearbeitung von Ticket");
     /***************\
      * Schulfächer *
