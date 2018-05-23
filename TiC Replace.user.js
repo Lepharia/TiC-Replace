@@ -148,13 +148,22 @@ function bt_replaceClick(zEvent) {
     \******************/
     tr_replace(/\\COM/, "BL Communications");
     tr_replace(/\\DE/,  "BL Digital Enterprise");
-    tr_replace(/\\GOV/,  "BL Government");
+    tr_replace(/\\GOV/, "BL Government");
     tr_replace(/\\ITF/, "BL IT-Factory");
     tr_replace(/\\MOB/, "BL Mobility");
     /**********************\
      * Zentrale Einheiten *
     \**********************/
-    tr_replace(/\\OPS/, "ZE MS Operations");
+    tr_replace(/\\OPS/,  "ZE MS Operations");
+    tr_replace(/\\MS/,   "ZE MS Managed Services");
+    tr_replace(/\\CS/,   "ZE Central Sales");
+    tr_replace(/\\MAR/,  "ZE Marketing & Communications");
+    tr_replace(/\\SD/,   "ZE Shared Delivery Services");
+    tr_replace(/\\CON/,  "MGS Controlling");
+    tr_replace(/\\FIBU/, "MGS Finanzbuchhaltung");
+    tr_replace(/\\FAC/,  "MGS Facility Management");
+    tr_replace(/\\ES/,   "MGS Enterprise Services");
+    tr_replace(/\\LEG/,  "MGS Legal Department");
     /**********************\
      * Andere Abkürzungen *
     \**********************/
