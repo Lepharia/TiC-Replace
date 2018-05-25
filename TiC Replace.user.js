@@ -159,6 +159,7 @@ function bt_replaceClick(zEvent) {
     tr_replace(/\\CS/,   "ZE Central Sales");
     tr_replace(/\\MAR/,  "ZE Marketing & Communications");
     tr_replace(/\\SD/,   "ZE Shared Delivery Services");
+    tr_replace(/\\CD/,   "ZE Corporate Development");
     tr_replace(/\\CON/,  "MGS Controlling");
     tr_replace(/\\FIBU/, "MGS Finanzbuchhaltung");
     tr_replace(/\\FAC/,  "MGS Facility Management");
