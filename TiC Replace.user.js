@@ -2,7 +2,7 @@
 // @name            TiC Replace
 // @namespace       tag:dennis.bonnmann@materna.de
 // @author          Dennis Bonnmann (dennis.bonnmann@materna.de)
-// @version         0.5.5
+// @version         0.5.6
 // @include         https://myintranet.materna.de/tic/*
 // @include         https://extranet.materna.de/*/tic/*
 // @exclude         https://myintranet.materna.de/tic/report*
@@ -134,6 +134,7 @@ function bt_replaceClick(zEvent) {
     tr_replace(/\\Ass/, "Erfassen von Asset");
     tr_replace(/\\Kot/, "Aufstellen eines Konftels");
     tr_replace(/\\Inc/, "Bearbeitung von Ticket");
+    tr_replace(/\\Dxu/, "_NAME_ - Neuinstallation von PC Arbeitsplatz# RECHNERNAME# über DX-Union");
     /************\
      * Meetings *
     \************/
@@ -169,6 +170,7 @@ function bt_replaceClick(zEvent) {
     tr_replace(/\\MAR/,  "ZE Marketing & Communications");
     tr_replace(/\\SD/,   "ZE Shared Delivery Services");
     tr_replace(/\\CD/,   "ZE Corporate Development");
+    tr_replace(/\\HR/,   "MGS Human Resources");
     tr_replace(/\\CON/,  "MGS Controlling");
     tr_replace(/\\FIBU/, "MGS Finanzbuchhaltung");
     tr_replace(/\\FAC/,  "MGS Facility Management");
