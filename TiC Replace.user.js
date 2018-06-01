@@ -2,7 +2,7 @@
 // @name            TiC Replace
 // @namespace       tag:dennis.bonnmann@materna.de
 // @author          Dennis Bonnmann (dennis.bonnmann@materna.de)
-// @version         0.5.3
+// @version         0.5.5
 // @include         https://myintranet.materna.de/tic/*
 // @include         https://extranet.materna.de/*/tic/*
 // @exclude         https://myintranet.materna.de/tic/report*
@@ -134,6 +134,15 @@ function bt_replaceClick(zEvent) {
     tr_replace(/\\Ass/, "Erfassen von Asset");
     tr_replace(/\\Kot/, "Aufstellen eines Konftels");
     tr_replace(/\\Inc/, "Bearbeitung von Ticket");
+    /************\
+     * Meetings *
+    \************/
+    tr_replace(/\\JFI/, "Jour Fixe Team IT-Infrastructure");
+    tr_replace(/\\JFF/, "Jour Fixe Team IT-Frontoffice");
+    tr_replace(/\\JFB/, "Jour Fixe Team IT-Backoffice");
+    tr_replace(/\\ABT/, "Abteilungsmeeting# ZE MS Operations#");
+    tr_replace(/\\BV/, "Betriebsversammlung");
+    tr_replace(/\\INFO/, "Infoveranstaltung der Geschäftsführung");
     /***************\
      * Schulfächer *
     \***************/
