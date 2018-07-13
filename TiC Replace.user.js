@@ -135,7 +135,7 @@ function bt_replaceClick(zEvent) {
     tr_replace(/\\Kot/, "Aufstellen eines Konftels");
     tr_replace(/\\Inc/, "_Name_ - Bearbeitung von TICKETNUMMER");
     tr_replace(/\\Dxu/, "_NAME_ - Neuinstallation von PC Arbeitsplatz# RECHNERNAME# über DX-Union");
-    tr_replace(/\\Mull/, "Aussonderung von Altrechner# RECHNERNAME:# IP #in DvTools# gelöscht, #DXU und AD-Konto gelöscht, Asset auf entsorgt# Festplatte ausgebaut und datenschutzgerecht entsorgt und Hardware entsorgt");
+    tr_replace(/\\Mull/, "Aussonderung von Altrechner# RECHNERNAME#: IP# in DvTools# gelöscht, #DXU und AD-Konto gelöscht, Asset auf entsorgt #Festplatte ausgebaut und datenschutzgerecht entsorgt und Hardware entsorgt");
     tr_replace(/\\Kl/, "Klausurvorbereitung im Fach");
     /************\
      * Meetings *
