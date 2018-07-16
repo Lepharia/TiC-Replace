@@ -135,7 +135,7 @@ function bt_replaceClick(zEvent) {
     tr_replace(/\\Kot/, "Aufstellen eines Konftels");
     tr_replace(/\\Inc/, "_NAME_ - Bearbeitung von TICKETNUMMER");
     tr_replace(/\\Dxu/, "_NAME_ - Neuinstallation von PC Arbeitsplatz# RECHNERNAME# über DX-Union");
-    tr_replace(/\\Mull/, "Aussonderung von Altrechner# RECHNERNAME#);
+    tr_replace(/\\Mull/, "Aussonderung von Altrechner# RECHNERNAME#");
     tr_replace(/\\Kl/, "Klausurvorbereitung im Fach");
     /************\
      * Meetings *
