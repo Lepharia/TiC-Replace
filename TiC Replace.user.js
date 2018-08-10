@@ -102,9 +102,8 @@ function doc_keyUp(e) {
     // CTRL + ALT + S
     if (e.ctrlKey && e.altKey && (e.keyCode == 83)) {
         /*bt_stripClick(null);*/
-        var iframeWin = document.getElementById('text').contentWindow;
-        var textObj = iframeWin.document.getElementById('Content');
-        insertTextAtCursor(textObj, "[e][/e]");
+        var $t = $(this);
+        insertAtCursor(this, '[INSERTED]');
     }
     
     //CTRL + ALT + R
@@ -113,11 +112,21 @@ function doc_keyUp(e) {
     }
     
     //CTRL + ALT + A
+    $('textarea').keyup(function (e) {
     if (e.ctrlKey && e.altKey && (e.keyCode == 65)) {
-        var iframeWin = document.getElementById('text').contentWindow;
-        var textObj = iframeWin.document.getElementById('Content');
-        insertTextAtCursor(textObj, "[e][/e]");
-    }
+        /*bt_stripClick(null);*/
+        var $t = $(this);
+        insertAtCursor(this, '[e][/e]');
+        };
+    });
+    //CTRL + ALT + D
+    $('textarea').keyup(function (e) {
+    if (e.ctrlKey && e.altKey && (e.keyCode == 68)) {
+        /*bt_stripClick(null);*/
+        var $t = $(this);
+        insertAtCursor(this, '[d][/d]');
+        };
+    });
 }
 
 /**
