@@ -111,15 +111,16 @@ function doc_keyUp(e) {
         bt_replaceClick(null);
     }
     
-    //CTRL + ALT + D
-    $('textarea').keyup(function (e) {
+}
+
+//CTRL + ALT + D
+$('textarea').keyup(function (e) {
     if (e.ctrlKey && e.altKey && (e.keyCode == 68)) {
         /*bt_stripClick(null);*/
         var $t = $(this);
         insertAtCursor(this, '[d][/d]');
         };
     });
-}
 
 //CTRL + ALT + A
 $('textarea').keyup(function (e) {
