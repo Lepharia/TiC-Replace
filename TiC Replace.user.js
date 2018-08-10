@@ -111,14 +111,6 @@ function doc_keyUp(e) {
         bt_replaceClick(null);
     }
     
-    //CTRL + ALT + A
-    $('textarea').keyup(function (e) {
-    if (e.ctrlKey && e.altKey && (e.keyCode == 65)) {
-        /*bt_stripClick(null);*/
-        var $t = $(this);
-        insertAtCursor(this, '[e][/e]');
-        };
-    });
     //CTRL + ALT + D
     $('textarea').keyup(function (e) {
     if (e.ctrlKey && e.altKey && (e.keyCode == 68)) {
@@ -128,6 +120,15 @@ function doc_keyUp(e) {
         };
     });
 }
+
+//CTRL + ALT + A
+$('textarea').keyup(function (e) {
+    if (e.ctrlKey && e.altKey && (e.keyCode == 65)) {
+        /*bt_stripClick(null);*/
+        var $t = $(this);
+        insertAtCursor(this, '[e][/e]');
+        };
+    });
 
 /**
  * Queries the page for textareas and replaces every occurrence of a string with another
