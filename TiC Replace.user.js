@@ -2,10 +2,13 @@
 // @name            TiC Replace
 // @namespace       tag:dennis.bonnmann@materna.de
 // @author          Dennis Bonnmann (dennis.bonnmann@materna.de)
-// @version         0.5.11
+// @version         0.6.0
 // @include         https://myintranet.materna.de/tic/*
 // @include         https://extranet.materna.de/*/tic/*
 // @exclude         https://myintranet.materna.de/tic/report*
+// @exclude         https://myintranet.materna.de/tic/selectProject*
+// @exclude         https://extranet.materna.de/*/tic/report*
+// @exclude         https://extranet.materna.de/*/tic/selectProject*
 // @grant           GM_addStyle
 // ==/UserScript==
 
