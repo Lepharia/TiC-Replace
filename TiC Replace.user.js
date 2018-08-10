@@ -101,7 +101,10 @@ function doc_keyUp(e) {
     
     // CTRL + ALT + S
     if (e.ctrlKey && e.altKey && (e.keyCode == 83)) {
-        bt_stripClick(null);
+        /*bt_stripClick(null);*/
+        var iframeWin = document.getElementById('text').contentWindow;
+        var textObj = iframeWin.document.getElementById('Content');
+        insertTextAtCursor(textObj, "[e][/e]");
     }
     
     //CTRL + ALT + R
@@ -204,18 +207,23 @@ function bt_stripClick(zEvent) {
     tr_replace(/\#/, "");
 }
 
-function insertTextAtCursor(el, text) {
-    var val = el.value, endIndex, range, doc = el.ownerDocument;
-    if (typeof el.selectionStart == "number"
-            && typeof el.selectionEnd == "number") {
-        endIndex = el.selectionEnd;
-        el.value = val.slice(0, endIndex) + text + val.slice(endIndex);
-        el.selectionStart = el.selectionEnd = endIndex + text.length;
-    } else if (doc.selection != "undefined" && doc.selection.createRange) {
-        el.focus();
-        range = doc.selection.createRange();
-        range.collapse(false);
-        range.text = text;
-        range.select();
+function insertAtCursor(myField, myValue) {
+    //IE support
+    if (document.selection) {
+        myField.focus();
+        sel = document.selection.createRange();
+        sel.text = myValue;
+    }
+    //MOZILLA and others
+    else if (myField.selectionStart || myField.selectionStart == '0') {
+        var startPos = myField.selectionStart;
+        var endPos = myField.selectionEnd;
+        myField.value = myField.value.substring(0, startPos)
+            + myValue
+            + myField.value.substring(endPos, myField.value.length);
+        myField.selectionStart = startPos + myValue.length;
+        myField.selectionEnd = startPos + myValue.length;
+    } else {
+        myField.value += myValue;
     }
 }
