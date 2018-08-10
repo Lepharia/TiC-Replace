@@ -2,7 +2,7 @@
 // @name            TiC Replace
 // @namespace       tag:dennis.bonnmann@materna.de
 // @author          Dennis Bonnmann (dennis.bonnmann@materna.de)
-// @version         0.5.11
+// @version         0.5.12
 // @include         https://myintranet.materna.de/tic/*
 // @include         https://extranet.materna.de/*/tic/*
 // @exclude         https://myintranet.materna.de/tic/report*
@@ -105,6 +105,13 @@ function doc_keyUp(e) {
     if (e.ctrlKey && e.altKey && (e.keyCode == 82)) {
         bt_replaceClick(null);
     }
+    
+    //CTRL + ALT + A
+    if (e.ctrlKey && e.altKey && (e.keyCode == 65)) {
+        var iframeWin = document.getElementById('text').contentWindow;
+        var textObj = iframeWin.document.getElementById('Content');
+        insertTextAtCursor(textObj, "[e][/e]");
+    }
 }
 
 /**
@@ -192,4 +199,20 @@ function bt_stripClick(zEvent) {
     tr_replace(/\*/, "");
     tr_replace(/\_/, "");
     tr_replace(/\#/, "");
+}
+
+function insertTextAtCursor(el, text) {
+    var val = el.value, endIndex, range, doc = el.ownerDocument;
+    if (typeof el.selectionStart == "number"
+            && typeof el.selectionEnd == "number") {
+        endIndex = el.selectionEnd;
+        el.value = val.slice(0, endIndex) + text + val.slice(endIndex);
+        el.selectionStart = el.selectionEnd = endIndex + text.length;
+    } else if (doc.selection != "undefined" && doc.selection.createRange) {
+        el.focus();
+        range = doc.selection.createRange();
+        range.collapse(false);
+        range.text = text;
+        range.select();
+    }
 }
