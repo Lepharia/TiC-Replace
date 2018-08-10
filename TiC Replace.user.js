@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name            TiC Replace
+// @name            TiC Replace_branch_dev
 // @namespace       tag:dennis.bonnmann@materna.de
 // @author          Dennis Bonnmann (dennis.bonnmann@materna.de)
 // @version         0.6.0
