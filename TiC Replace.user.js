@@ -101,9 +101,7 @@ function doc_keyUp(e) {
     
     // CTRL + ALT + S
     if (e.ctrlKey && e.altKey && (e.keyCode == 83)) {
-        /*bt_stripClick(null);*/
-        var $t = $(this);
-        insertAtCursor(this, '[INSERTED]');
+        bt_stripClick(null);
     }
     
     //CTRL + ALT + R
