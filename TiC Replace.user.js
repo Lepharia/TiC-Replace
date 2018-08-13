@@ -157,9 +157,9 @@ function bt_replaceClick(zEvent) {
     \*******************/
     tr_replace(/\\Ass/, "Erfassen von Asset");
     tr_replace(/\\Kot/, "Aufstellen eines Konftels");
-    tr_replace(/\\Inc/, "_NAME_ - Bearbeitung von TICKETNUMMER");
-    tr_replace(/\\Dxu/, "_NAME_ - Neuinstallation von PC Arbeitsplatz# RECHNERNAME# über DX-Union");
-    tr_replace(/\\Mull/, "Aussonderung von Altrechner# RECHNERNAME#");
+    tr_replace(/\\Inc/, "[e]NAME[/e] - Bearbeitung von TICKETNUMMER");
+    tr_replace(/\\Dxu/, "[e]NAME[/e] - Neuinstallation von PC Arbeitsplatz[d] RECHNERNAME[/d] über DX-Union");
+    tr_replace(/\\Mull/, "Aussonderung von Altrechner[d] RECHNERNAME[/d]");
     tr_replace(/\\Kl/, "Klausurvorbereitung im Fach");
     /************\
      * Meetings *
@@ -167,7 +167,7 @@ function bt_replaceClick(zEvent) {
     tr_replace(/\\JFI/, "Jour Fixe Team IT-Infrastructure");
     tr_replace(/\\JFF/, "Jour Fixe Team IT-Frontoffice");
     tr_replace(/\\JFB/, "Jour Fixe Team IT-Backoffice");
-    tr_replace(/\\ABT/, "Abteilungsmeeting# ZE MS Operations#");
+    tr_replace(/\\ABT/, "Abteilungsmeeting[d] ZE MS Operations[/d]");
     tr_replace(/\\BV/, "Betriebsversammlung");
     tr_replace(/\\INFO/, "Infoveranstaltung der Geschäftsführung");
     /***************\
@@ -216,6 +216,10 @@ function bt_stripClick(zEvent) {
     tr_replace(/\*/, "");
     tr_replace(/\_/, "");
     tr_replace(/\#/, "");
+    tr_replace(/\[e\]/, "");
+    tr_replace(/\[\/e\]/, "");
+    tr_replace(/\[d\]/, "");
+    tr_replace(/\[\/d\]/, "");
 }
 
 function insertAtCursor(myField, myValue) {
