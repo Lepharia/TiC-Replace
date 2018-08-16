@@ -243,6 +243,6 @@ addHotKeys;
 var oldCreate = window.createTextBox;
 window.createTextBox = function(_name, _id, _value, maxlength){
     oldCreate;
-    addHotkeys
+    addHotkeys;
 } 
 
