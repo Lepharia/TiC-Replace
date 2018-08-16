@@ -132,7 +132,8 @@ function addHotkeyToBBTag(hotkey, bbTag){
         var $t = $(this);
         insertAtCursor(this, bbTag);
         };
-    });*/ 
+    });*/
+    alert("bing!");
     var textNodes = document.evaluate("//TEXTAREA", document, null, XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE, null);
     var length = textNodes.snapshotLength;
     var i;
