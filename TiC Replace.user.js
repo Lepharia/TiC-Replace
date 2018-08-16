@@ -238,11 +238,11 @@ function addHotKeys(){
     addHotkeyToBBTag(65, '[e][/e]');
 }
 
-addHotKeys;
+addHotKeys();
 
 var oldCreate = window.createTextBox;
 window.createTextBox = function(_name, _id, _value, maxlength){
-    oldCreate;
-    addHotkeys;
+    oldCreate(_name, _id, _value, maxlength);
+    addHotkeys();
 } 
 
