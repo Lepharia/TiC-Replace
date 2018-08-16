@@ -114,13 +114,14 @@ function doc_keyUp(e) {
         bt_replaceClick(null);
     }
     
+    /*
     if (e.ctrlKey && e.altKey && ((e.keyCode == 68) || (e.which === 68))){
         addHotkeys();
     }
     
     if (e.ctrlKey && e.altKey && ((e.keyCode == 65) || (e.which === 65))){
         addHotkeys();
-    }
+    }*/
     
 }
 
@@ -248,10 +249,10 @@ function insertAtCursor(myField, myValue) {
 
 addHotkeys();
 
-/*
+
 var oldCreate = window.createTextBox;
 window.createTextBox = function(_name, _id, _value, maxlength){
     oldCreate(_name, _id, _value, maxlength);
     addHotkeys();
-} */
+} 
 
