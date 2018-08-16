@@ -251,8 +251,38 @@ addHotkeys();
 
 
 var oldCreate = window.createTextBox;
-window.createTextBox = function(_name, _id, _value, maxlength){
-    oldCreate(_name, _id, _value, maxlength);
-    addHotkeys();
-} 
+function createTextBox(_name, _id, _value, maxlength) {
+    alert("Funktioniert");
+	let $inpbox = $("<textarea/>");
+	$inpbox
+		.addClass("bemerkungsfeld")
+		.attr("name", _name)
+		.attr("id", _id)
+		.attr("rows", "1")
+		.attr("cols", "25")
+		.attr("wrap", "soft")
+		.attr("maxlength", maxlength || EditWeekForm.defaultValues.textarea.maxlength)
+		.css("overflow", "auto")
+		.css("overflowX", "auto")
+		.bind("change", function() { setChanged(); })
+		.bind("keyup", function(event) { preventWeekChange(event); })
+        .bind("keyup", function (e) {
+            if (e.ctrlKey && e.altKey && ((e.keyCode == 65) || (e.which === 65))) {
+                var $t = $(this);
+                insertAtCursor(this, bbTag);
+            };
+        })
+        .bind("keyup", function (e) {
+            if (e.ctrlKey && e.altKey && ((e.keyCode == 68) || (e.which === 68))) {
+                var $t = $(this);
+                insertAtCursor(this, bbTag);
+            };
+        })
+    
+		.val(_value);
 
+	if(typeof(addAutocomplete) === "function"){
+		addAutocomplete($inpbox);
+	}
+	return $inpbox.get(0);//retrieve plain javascript element!
+};
