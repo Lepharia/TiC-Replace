@@ -96,11 +96,6 @@ document.getElementById("bt_Strip").addEventListener(
 /**Define handler for Hotkeys**/
 document.addEventListener('keyup', doc_keyUp, false);
 
-function addHotkeys(){
-    addHotkeyToBBTag(68, '[d][/d]');
-    addHotkeyToBBTag(65, '[e][/e]');
-}
-
 /**Implements the handler for hotkeys. Stripping is triggered by CTRL+ALT+S, Replace by CTRL+ALT+R**/
 function doc_keyUp(e) {
     
@@ -246,7 +241,12 @@ function insertAtCursor(myField, myValue) {
     }
 }
 
-addHotkeys();
+function addHotKeys(){
+    addHotkeyToBBTag(68, '[d][/d]');
+    addHotkeyToBBTag(65, '[e][/e]');
+}
+
+addHotKeys();
 
 /*
 var oldCreate = window.createTextBox;
