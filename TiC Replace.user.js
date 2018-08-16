@@ -127,12 +127,24 @@ function doc_keyUp(e) {
 
 //TODO: COMMENT!!
 function addHotkeyToBBTag(hotkey, bbTag){
-  $('textarea').keyup(function (e) {
+  /*$('textarea').keyup(function (e) {
     if (e.ctrlKey && e.altKey && ((e.keyCode == hotkey) || (e.which === hotkey))) {
         var $t = $(this);
         insertAtCursor(this, bbTag);
         };
-    });  
+    });*/ 
+    var textNodes = document.evaluate("//TEXTAREA", document, null, XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE, null);
+    var length = textNodes.snapshotLength;
+    var i;
+    for (i = 0; i < textNodes.snapshotLength; i++) {
+        var node = textNodes.snapshotItem(i);
+        node.bind("keyup", function(e){
+            if (e.ctrlKey && e.altKey && ((e.keyCode == hotkey) || (e.which === hotkey))) {
+            var $t = $(this);
+            insertAtCursor(this, bbTag);
+            }
+        });
+    }
 }
 
 /**
