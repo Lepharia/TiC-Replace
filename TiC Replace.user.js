@@ -111,7 +111,7 @@ function doc_keyUp(e) {
     
 }
 
-//CTRL + ALT + D
+//TODO: COMMENT!!
 function addHotkeyToBBTag(hotkey, bbTag){
   $('textarea').keyup(function (e) {
     if (e.ctrlKey && e.altKey && ((e.keyCode == hotkey) || (e.which === hotkey))) {
@@ -120,23 +120,6 @@ function addHotkeyToBBTag(hotkey, bbTag){
         };
     });  
 }
-/*
-$('textarea').keyup(function (e) {
-    if (e.ctrlKey && e.altKey && (e.keyCode == 68)) {
-
-        var $t = $(this);
-        insertAtCursor(this, '[d][/d]');
-        };
-    });
-
-//CTRL + ALT + A
-$('textarea').keyup(function (e) {
-    if (e.ctrlKey && e.altKey && (e.keyCode == 65)) {
-        var $t = $(this);
-        insertAtCursor(this, '[e][/e]');
-        };
-    });
-*/
 
 /**
  * Queries the page for textareas and replaces every occurrence of a string with another
@@ -250,5 +233,16 @@ function insertAtCursor(myField, myValue) {
     }
 }
 
-addHotkeyToBBTag(68, '[d][/d]');
-addHotkeyToBBTag(65, '[e][/e]');
+function addHotKeys(){
+    addHotkeyToBBTag(68, '[d][/d]');
+    addHotkeyToBBTag(65, '[e][/e]');
+}
+
+addHotKeys;
+
+var oldCreate = window.createTextBox;
+window.createTextBox = function(_name, _id, _value, maxlength){
+    oldCreate;
+    addHotkeys
+} 
+
