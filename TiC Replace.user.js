@@ -224,8 +224,8 @@ function bt_replaceClick(zEvent) {
     \**********************/
     tr_replace(/\\GST/, "Geschäftsstelle");
     tr_replace(/\\BS/,  "Berufsschule");
-    tr_replace(/\\Em/,  "[e][/e]");
-    tr_replace(/\\Del/,  "[d][/d]");
+    tr_replace(/\\BBE/,  "[e][/e]");
+    tr_replace(/\\BBD/,  "[d][/d]");
 }
 
 /**
