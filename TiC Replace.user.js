@@ -96,11 +96,6 @@ document.getElementById("bt_Strip").addEventListener(
 /**Define handler for Hotkeys**/
 document.addEventListener('keyup', doc_keyUp, false);
 
-function addHotkeys(){
-    addHotkeyToBBTag(68, '[d][/d]');
-    addHotkeyToBBTag(65, '[e][/e]');
-}
-
 /**Implements the handler for hotkeys. Stripping is triggered by CTRL+ALT+S, Replace by CTRL+ALT+R**/
 function doc_keyUp(e) {
     
@@ -114,39 +109,25 @@ function doc_keyUp(e) {
         bt_replaceClick(null);
     }
     
-    /*
-    if (e.ctrlKey && e.altKey && ((e.keyCode == 68) || (e.which === 68))){
-        addHotkeys();
-    }
-    
-    if (e.ctrlKey && e.altKey && ((e.keyCode == 65) || (e.which === 65))){
-        addHotkeys();
-    }
-    */
 }
 
-//TODO: COMMENT!!
-function addHotkeyToBBTag(hotkey, bbTag){
-  /*$('textarea').keyup(function (e) {
-    if (e.ctrlKey && e.altKey && ((e.keyCode == hotkey) || (e.which === hotkey))) {
+//CTRL + ALT + D
+$('textarea').keyup(function (e) {
+    if (e.ctrlKey && e.altKey && (e.keyCode == 68)) {
+        /*bt_stripClick(null);*/
         var $t = $(this);
-        insertAtCursor(this, bbTag);
+        insertAtCursor(this, '[d][/d]');
         };
-    });*/
-    //alert("bing!");
-    var textNodes = document.evaluate("//TEXTAREA", document, null, XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE, null);
-    var length = textNodes.snapshotLength;
-    var i;
-    for (i = 0; i < textNodes.snapshotLength; i++) {
-        var node = textNodes.snapshotItem(i);
-        node.bind("keyup", function(e){
-            if (e.ctrlKey && e.altKey && ((e.keyCode == hotkey) || (e.which === hotkey))) {
-            var $t = $(this);
-            insertAtCursor(this, bbTag);
-            }
-        });
-    }
-}
+    });
+
+//CTRL + ALT + A
+$('textarea').keyup(function (e) {
+    if (e.ctrlKey && e.altKey && (e.keyCode == 65)) {
+        /*bt_stripClick(null);*/
+        var $t = $(this);
+        insertAtCursor(this, '[e][/e]');
+        };
+    });
 
 /**
  * Queries the page for textareas and replaces every occurrence of a string with another
@@ -261,13 +242,3 @@ function insertAtCursor(myField, myValue) {
         myField.value += myValue;
     }
 }
-
-addHotkeys();
-
-/*
-var oldCreate = window.createTextBox;
-window.createTextBox = function(_name, _id, _value, maxlength){
-    oldCreate(_name, _id, _value, maxlength);
-    addHotkeys();
-} */
-
