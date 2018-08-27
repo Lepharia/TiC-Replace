@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name            TiC Replace_branch_beta
+// @name            TiC Replace_branch_dev
 // @namespace       tag:dennis.bonnmann@materna.de
 // @author          Dennis Bonnmann (dennis.bonnmann@materna.de)
 // @version         0.7.0
@@ -224,6 +224,8 @@ function bt_replaceClick(zEvent) {
     \**********************/
     tr_replace(/\\GST/, "Geschäftsstelle");
     tr_replace(/\\BS/,  "Berufsschule");
+    tr_replace(/\\Em/,  "[e][/e]");
+    tr_replace(/\\Del/,  "[d][/d]");
 }
 
 /**
