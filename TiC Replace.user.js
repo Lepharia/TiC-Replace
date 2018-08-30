@@ -159,6 +159,7 @@ function bt_replaceClick(zEvent) {
     tr_replace(/\\Dxu/, "[e]NAME[/e] - Neuinstallation von PC Arbeitsplatz[d] RECHNERNAME[/d] über DX-Union");
     tr_replace(/\\Mull/, "Aussonderung von Altrechner[d] RECHNERNAME[/d]");
     tr_replace(/\\Kl/, "Klausurvorbereitung im Fach");
+    tr_replace(/\\Vid/, "Anschauen eines Lehrvideos");
     /************\
      * Meetings *
     \************/
