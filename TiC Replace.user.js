@@ -160,6 +160,7 @@ function bt_replaceClick(zEvent) {
     tr_replace(/\\Mull/, "Aussonderung von Altrechner[d] RECHNERNAME[/d]");
     tr_replace(/\\Kl/, "Klausurvorbereitung im Fach");
     tr_replace(/\\Vid/, "Anschauen eines Lehrvideos");
+    tr_replace(/\\PS/, "Übung in PowerShell");
     /************\
      * Meetings *
     \************/
