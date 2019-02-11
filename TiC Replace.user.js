@@ -155,7 +155,8 @@ function bt_replaceClick(zEvent) {
     \*******************/
     tr_replace(/\\Ass/, "Erfassen von Asset");
     tr_replace(/\\Kot/, "Aufstellen eines Konftels");
-    tr_replace(/\\Inc/, "[e]NAME[/e] - Bearbeitung von TICKETNUMMER");
+    tr_replace(/\\Inc/, "Ticketbearbeitung: ");
+    tr_replace(/\\Win/, "Windows-Client");
     tr_replace(/\\Dxu/, "[e]NAME[/e] - Neuinstallation von PC Arbeitsplatz[d] RECHNERNAME[/d] über DX-Union");
     tr_replace(/\\Mull/, "Aussonderung von Altrechner[d] RECHNERNAME[/d]");
     tr_replace(/\\Kl/, "Klausurvorbereitung im Fach");
