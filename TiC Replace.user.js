@@ -43,6 +43,7 @@ GM_addStyle(multilineStr(function () {/*!
     #div_TicReplace {
         opacity:                0.9;
         z-index:                1100;
+        margin-bottom:          6px;
         padding:                5px;
         padding-top:            10px;
         padding-bottom:         10px;
