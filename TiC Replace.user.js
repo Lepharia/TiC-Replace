@@ -38,6 +38,9 @@ menu.insertAdjacentElement("afterend",zNode);
 
 //--- Style our newly added elements using CSS.
 GM_addStyle(multilineStr(function () {/*!
+    #td_TicReplace{
+        border:                 2px solid rgb(15,44,68);
+    }
     #div_TicReplace {
         margin:                 5px;
         opacity:                0.9;
@@ -45,11 +48,10 @@ GM_addStyle(multilineStr(function () {/*!
         padding:                5px;
         padding-top:            10px;
         padding-bottom:         10px;
-        border:                 2px solid rgb(15,44,68);
     }
     .ticreplace {
         font-family:            Calibri !important;
-        font-size:              18px    !important;
+        font-size:              18px !important;
         text-align:             center;
         font-weight:            bold;
         color:                  rgb(15,44,68);
@@ -58,7 +60,7 @@ GM_addStyle(multilineStr(function () {/*!
         cursor:                 pointer;
         margin:                 5px;
         padding:                5px;
-        font-size:              13px;
+        font-size:              13px !important;
         background-color:       rgb(220,62,24);
         color:                  white;
         font-weight:            normal;
