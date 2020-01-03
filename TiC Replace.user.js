@@ -39,15 +39,14 @@ menu.insertAdjacentElement("afterend",zNode);
 //--- Style our newly added elements using CSS.
 GM_addStyle(multilineStr(function () {/*!
     #td_TicReplace{
-        border:                 2px solid rgb(15,44,68);
     }
     #div_TicReplace {
-        margin:                 5px;
         opacity:                0.9;
         z-index:                1100;
         padding:                5px;
         padding-top:            10px;
         padding-bottom:         10px;
+        border:                 2px solid rgb(15,44,68);
     }
     .ticreplace {
         font-family:            Calibri !important;
