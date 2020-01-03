@@ -2,7 +2,7 @@
 // @name            TiC Replace_branch_dev
 // @namespace       tag:dennis.bonnmann@materna.de
 // @author          Dennis Bonnmann (dennis.bonnmann@materna.de)
-// @version         0.7.1
+// @version         0.8.0
 // @include         https://myintranet.materna.de/tic/*
 // @include         https://extranet.materna.de/*/tic/*
 // @exclude         https://myintranet.materna.de/tic/report*
@@ -17,45 +17,50 @@
 /*--- Create a button in a container div.  It will be styled and
     positioned with CSS.
 */
-var zNode       = document.createElement('div');
+var zNode       = document.createElement('TD');
 zNode.innerHTML =
-    '<div class="caption">' +
-        '- TiC Replace -' +
-    '</div>' +
-    '<div id="bt_Strip" class="tm_button">' +
-        'Sonderzeichen entfernen<br>(STRG+ALT+S)' +
-    '</div>' +
-    '<div id="bt_Replace" class="tm_button">' +
-        'Abkürzungen auflösen<br>(STRG+ALT+R)' +
-    '</div>';
-zNode.setAttribute('id', 'div_TicReplace');
-document.body.appendChild(zNode);
+    '<td>' +
+        '<div id="div_TicReplace">' +
+            '<div class="caption ticreplace">' +
+                '- TiC Replace -' +
+            '</div>' +
+            '<div id="bt_Strip" class="tm_button ticreplace">' +
+                'Sonderzeichen entfernen<br>(STRG+ALT+S)' +
+            '</div>' +
+            '<div id="bt_Replace" class="tm_button ticreplace">' +
+                'Abkürzungen auflösen<br>(STRG+ALT+R)' +
+            '</div>' +
+        '</div>' + 
+    '</td>';
+zNode.setAttribute('id', 'td_TicReplace');
+var menu = document.getElementsByClassName("actions")[0];
+menu.insertAdjacentElement("afterend",zNode);
 
 //--- Style our newly added elements using CSS.
 GM_addStyle(multilineStr(function () {/*!
+    #td_TicReplace{
+    }
     #div_TicReplace {
-        position:               absolute;
-        top:                    188px;
-        right:                  750px;
-        height:                 177px;
-        margin:                 5px;
         opacity:                0.9;
         z-index:                1100;
+        margin-bottom:          6px;
         padding:                5px;
         padding-top:            10px;
         padding-bottom:         10px;
-        font-family:            Calibri;
-        font-size:              18px;
+        border:                 2px solid rgb(15,44,68);
+    }
+    .ticreplace {
+        font-family:            Calibri !important;
+        font-size:              18px !important;
         text-align:             center;
         font-weight:            bold;
-        border:                 2px solid rgb(15,44,68);
         color:                  rgb(15,44,68);
     }
     .tm_button {
         cursor:                 pointer;
         margin:                 5px;
         padding:                5px;
-        font-size:              13px;
+        font-size:              13px !important;
         background-color:       rgb(220,62,24);
         color:                  white;
         font-weight:            normal;
@@ -66,7 +71,7 @@ GM_addStyle(multilineStr(function () {/*!
         text-decoration:        underline;
     }
     div.caption{
-        margin-bottom:          25px;
+        margin-bottom:          11px;
     }
 */
 }));
