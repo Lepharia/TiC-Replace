@@ -17,7 +17,7 @@
 /*--- Create a button in a container div.  It will be styled and
     positioned with CSS.
 */
-var zNode       = document.createElement('td');
+var zNode       = document.createElement('TD');
 zNode.innerHTML =
     '<td>' +
         '<div id="div_ticreplace">' +
