@@ -17,20 +17,22 @@
 /*--- Create a button in a container div.  It will be styled and
     positioned with CSS.
 */
-var zNode       = document.createElement('div');
+var zNode       = document.createElement('td');
 zNode.innerHTML =
     '<td>' +
-        '<div class="caption">' +
-            '- TiC Replace -' +
-        '</div>' +
-        '<div id="bt_Strip" class="tm_button">' +
-            'Sonderzeichen entfernen<br>(STRG+ALT+S)' +
-        '</div>' +
-        '<div id="bt_Replace" class="tm_button">' +
-            'Abkürzungen auflösen<br>(STRG+ALT+R)' +
+        '<div id="div_ticreplace">' +
+            '<div class="caption">' +
+                '- TiC Replace -' +
+            '</div>' +
+            '<div id="bt_Strip" class="tm_button">' +
+                'Sonderzeichen entfernen<br>(STRG+ALT+S)' +
+            '</div>' +
+            '<div id="bt_Replace" class="tm_button">' +
+                'Abkürzungen auflösen<br>(STRG+ALT+R)' +
+            '</div>' +
         '</div>' + 
     '</td>';
-zNode.setAttribute('id', 'div_TicReplace');
+zNode.setAttribute('id', 'td_TicReplace');
 var menu = document.getElementsByClassName("actions")[0];
 menu.insertAdjacentElement("afterend",zNode);
 
@@ -38,8 +40,8 @@ menu.insertAdjacentElement("afterend",zNode);
 GM_addStyle(multilineStr(function () {/*!
     #div_TicReplace {
         position:               absolute;
-        top:                    188px;
-        right:                  750px;
+        top:                    0px;
+        right:                  0px;
         height:                 177px;
         margin:                 5px;
         opacity:                0.9;
