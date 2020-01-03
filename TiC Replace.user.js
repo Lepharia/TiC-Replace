@@ -39,10 +39,6 @@ menu.insertAdjacentElement("afterend",zNode);
 //--- Style our newly added elements using CSS.
 GM_addStyle(multilineStr(function () {/*!
     #div_TicReplace {
-        position:               absolute;
-        top:                    0px;
-        right:                  0px;
-        height:                 177px;
         margin:                 5px;
         opacity:                0.9;
         z-index:                1100;
