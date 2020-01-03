@@ -19,17 +19,19 @@
 */
 var zNode       = document.createElement('div');
 zNode.innerHTML =
-    '<div class="caption">' +
-        '- TiC Replace -' +
-    '</div>' +
-    '<div id="bt_Strip" class="tm_button">' +
-        'Sonderzeichen entfernen<br>(STRG+ALT+S)' +
-    '</div>' +
-    '<div id="bt_Replace" class="tm_button">' +
-        'Abkürzungen auflösen<br>(STRG+ALT+R)' +
-    '</div>';
+    '<td>' +
+        '<div class="caption">' +
+            '- TiC Replace -' +
+        '</div>' +
+        '<div id="bt_Strip" class="tm_button">' +
+            'Sonderzeichen entfernen<br>(STRG+ALT+S)' +
+        '</div>' +
+        '<div id="bt_Replace" class="tm_button">' +
+            'Abkürzungen auflösen<br>(STRG+ALT+R)' +
+        '</div>' + 
+    '</td>';
 zNode.setAttribute('id', 'div_TicReplace');
-document.body.appendChild(zNode);
+document.getElementsByName("actions")[0].insertAdjacentElement("afterend",zNode);
 
 //--- Style our newly added elements using CSS.
 GM_addStyle(multilineStr(function () {/*!
