@@ -71,7 +71,7 @@ GM_addStyle(multilineStr(function () {/*!
         text-decoration:        underline;
     }
     div.caption{
-        margin-bottom:          15px;
+        margin-bottom:          11px;
     }
 */
 }));
