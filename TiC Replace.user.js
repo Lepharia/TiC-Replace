@@ -20,7 +20,7 @@
 var zNode       = document.createElement('TD');
 zNode.innerHTML =
     '<td>' +
-        '<div id="div_ticreplace">' +
+        '<div id="div_TicReplace">' +
             '<div class="caption">' +
                 '- TiC Replace -' +
             '</div>' +
