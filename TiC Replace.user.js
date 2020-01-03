@@ -31,7 +31,7 @@ zNode.innerHTML =
         '</div>' + 
     '</td>';
 zNode.setAttribute('id', 'div_TicReplace');
-document.getElementsByName("actions")[0].insertAdjacentElement("afterend",zNode);
+document.getElementsByClassName("actions")[0].insertAdjacentElement("afterend",zNode);
 
 //--- Style our newly added elements using CSS.
 GM_addStyle(multilineStr(function () {/*!
