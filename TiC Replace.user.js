@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name            TiC Replace_branch_beta
+// @name            TiC Replace_branch_dev
 // @namespace       tag:dennis.bonnmann@materna.de
 // @author          Dennis Bonnmann (dennis.bonnmann@materna.de)
-// @version         0.7.0
+// @version         0.7.1
 // @include         https://myintranet.materna.de/tic/*
 // @include         https://extranet.materna.de/*/tic/*
 // @exclude         https://myintranet.materna.de/tic/report*
@@ -153,18 +153,24 @@ function bt_replaceClick(zEvent) {
     /*******************\
      * Routineaufgaben *
     \*******************/
-    tr_replace(/\\Ass/, "Erfassen von Asset");
-    tr_replace(/\\Kot/, "Aufstellen eines Konftels");
-    tr_replace(/\\Inc/, "[e]NAME[/e] - Bearbeitung von TICKETNUMMER");
-    tr_replace(/\\Dxu/, "[e]NAME[/e] - Neuinstallation von PC Arbeitsplatz[d] RECHNERNAME[/d] über DX-Union");
+    tr_replace(/\\Ass/,  "Erfassen von Asset");
+    tr_replace(/\\Kot/,  "Aufstellen eines Konftels");
+    tr_replace(/\\Inc/,  "Ticketbearbeitung:");
+    tr_replace(/\\Win/,  "Windows-Client");
+    tr_replace(/\\VM/,   "VM Bereitstellung");
+    tr_replace(/\*E\*/,  "Einarbeitung in");
+    tr_replace(/\\Dxu/,  "[e]NAME[/e] - Neuinstallation von PC Arbeitsplatz[d] RECHNERNAME[/d] über DX-Union");
     tr_replace(/\\Mull/, "Aussonderung von Altrechner[d] RECHNERNAME[/d]");
-    tr_replace(/\\Kl/, "Klausurvorbereitung im Fach");
+    tr_replace(/\\Kl/,   "Klausurvorbereitung im Fach");
+    tr_replace(/\\Vid/,  "Anschauen eines Lehrvideos");
+    tr_replace(/\\PS/,   "Übung in PowerShell");
+    tr_replace(/\\Py/,   "Übung in Python");
     /************\
      * Meetings *
     \************/
-    tr_replace(/\\JFI/, "Jour Fixe Team IT-Infrastructure");
-    tr_replace(/\\JFF/, "Jour Fixe Team IT-Frontoffice");
-    tr_replace(/\\JFB/, "Jour Fixe Team IT-Backoffice");
+    tr_replace(/\\JFI/, "Teammeeting IT-Infrastructure");
+    tr_replace(/\\JFF/, "Teammeeting IT-Frontoffice");
+    tr_replace(/\\JFB/, "Teammeeting IT-Backoffice");
     tr_replace(/\\ABT/, "Abteilungsmeeting[d] ZE MS Operations[/d]");
     tr_replace(/\\BV/, "Betriebsversammlung");
     tr_replace(/\\INFO/, "Infoveranstaltung der Geschäftsführung");
@@ -205,6 +211,8 @@ function bt_replaceClick(zEvent) {
     \**********************/
     tr_replace(/\\GST/, "Geschäftsstelle");
     tr_replace(/\\BS/,  "Berufsschule");
+    tr_replace(/\\BBE/,  "[e][/e]");
+    tr_replace(/\\BBD/,  "[d][/d]");
 }
 
 /**
