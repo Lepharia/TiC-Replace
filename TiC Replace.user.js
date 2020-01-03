@@ -21,13 +21,13 @@ var zNode       = document.createElement('TD');
 zNode.innerHTML =
     '<td>' +
         '<div id="div_TicReplace">' +
-            '<div class="caption">' +
+            '<div class="caption ticreplace">' +
                 '- TiC Replace -' +
             '</div>' +
-            '<div id="bt_Strip" class="tm_button">' +
+            '<div id="bt_Strip" class="tm_button ticreplace">' +
                 'Sonderzeichen entfernen<br>(STRG+ALT+S)' +
             '</div>' +
-            '<div id="bt_Replace" class="tm_button">' +
+            '<div id="bt_Replace" class="tm_button ticreplace">' +
                 'Abkürzungen auflösen<br>(STRG+ALT+R)' +
             '</div>' +
         '</div>' + 
@@ -45,11 +45,13 @@ GM_addStyle(multilineStr(function () {/*!
         padding:                5px;
         padding-top:            10px;
         padding-bottom:         10px;
+        border:                 2px solid rgb(15,44,68);
+    }
+    .ticreplace {
         font-family:            Calibri !important;
         font-size:              18px    !important;
         text-align:             center;
         font-weight:            bold;
-        border:                 2px solid rgb(15,44,68);
         color:                  rgb(15,44,68);
     }
     .tm_button {
