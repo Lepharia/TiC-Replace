@@ -45,8 +45,8 @@ GM_addStyle(multilineStr(function () {/*!
         padding:                5px;
         padding-top:            10px;
         padding-bottom:         10px;
-        font-family:            Calibri;
-        font-size:              18px;
+        font-family:            Calibri !important;
+        font-size:              18px    !important;
         text-align:             center;
         font-weight:            bold;
         border:                 2px solid rgb(15,44,68);
