@@ -2,7 +2,7 @@
 // @name            TiC Replace_beta
 // @namespace       tag:dennis.bonnmann@materna.de
 // @author          Dennis Bonnmann (dennis.bonnmann@materna.de)
-// @version         0.8.1
+// @version         0.8.2
 // @include         https://myintranet.materna.de/tic/*
 // @include         https://extranet.materna.de/*/tic/*
 // @exclude         https://myintranet.materna.de/tic/report*
@@ -163,7 +163,7 @@ function bt_replaceClick(zEvent) {
     tr_replace(/\\Inc/,  "Ticketbearbeitung:");
     tr_replace(/\\Win/,  "Windows-Client");
     tr_replace(/\\VM/,   "VM Bereitstellung");
-    tr_replace(/\\VM/,   "Virtuelle Infrastruktur");
+    tr_replace(/\\VI/,   "Virtuelle Infrastruktur");
     tr_replace(/\*E\*/,  "Einarbeitung in");
     tr_replace(/\\Dxu/,  "[e]NAME[/e] - Neuinstallation von PC Arbeitsplatz[d] RECHNERNAME[/d] über DX-Union");
     tr_replace(/\\Mull/, "Aussonderung von Altrechner[d] RECHNERNAME[/d]");
