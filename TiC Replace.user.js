@@ -172,6 +172,7 @@ function bt_replaceClick(zEvent) {
     tr_replace(/\\Vid/,  "Anschauen eines Lehrvideos");
     tr_replace(/\\PS/,   "Übung in PowerShell");
     tr_replace(/\\Py/,   "Übung in Python");
+    tr_replace(/\\Tg/,   "Tagesgeschäft: ");
     /************\
      * Meetings *
     \************/
