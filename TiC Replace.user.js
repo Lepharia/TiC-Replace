@@ -33,7 +33,7 @@ zNode.innerHTML =
     '</div>' +
     '</td>';
 zNode.setAttribute('id', 'td_TicReplace');
-var menu = document.getElementsByID("loga-zeitdaten-table");
+var menu = document.getElementById("loga-zeitdaten-table");
 menu.insertAdjacentElement("afterend", zNode);
 
 //--- Style our newly added elements using CSS.
