@@ -2,7 +2,7 @@
 // @name            TiC Replace_beta
 // @namespace       tag:dennis.bonnmann@materna.de
 // @author          Dennis Bonnmann (dennis.bonnmann@materna.de)
-// @version         0.8.10
+// @version         0.8.11
 // @include         https://myintranet.materna.de/tic/*
 // @include         https://extranet.materna.de/*/tic/*
 // @exclude         https://myintranet.materna.de/tic/report*
@@ -17,7 +17,7 @@
 /*--- Create a button in a container div.  It will be styled and
     positioned with CSS.
 */
-var zNode = document.createElement('TD');
+var zNode = document.createElement('div');
 zNode.innerHTML =
     '<div id="div_TicReplace">' +
     '<div class="caption ticreplace">' +
@@ -30,7 +30,7 @@ zNode.innerHTML =
     'Abkürzungen auflösen<br>(STRG+ALT+R)' +
     '</div>' +
     '</div>';
-zNode.setAttribute('id', 'td_TicReplace');
+zNode.setAttribute('id', 'div_TicReplace_outer');
 var menu = document.getElementById("loga-zeitdaten-table");
 menu.insertAdjacentElement("afterend", zNode);
 
