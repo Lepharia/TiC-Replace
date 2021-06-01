@@ -2,7 +2,7 @@
 // @name            TiC Replace_beta
 // @namespace       tag:dennis.bonnmann@materna.de
 // @author          Dennis Bonnmann (dennis.bonnmann@materna.de)
-// @version         0.8.7
+// @version         0.8.8
 // @include         https://myintranet.materna.de/tic/*
 // @include         https://extranet.materna.de/*/tic/*
 // @exclude         https://myintranet.materna.de/tic/report*
@@ -33,7 +33,7 @@ zNode.innerHTML =
     '</div>' +
     '</td>';
 zNode.setAttribute('id', 'td_TicReplace');
-var menu = document.getElementsByID("loga-zeitdaten-table")[0];
+var menu = document.getElementsByID("loga-zeitdaten-table");
 menu.insertAdjacentElement("afterend", zNode);
 
 //--- Style our newly added elements using CSS.
