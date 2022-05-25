@@ -2,7 +2,7 @@
 // @name            TiC Replace_beta
 // @namespace       tag:dennis.bonnmann@materna.de
 // @author          Dennis Bonnmann (dennis.bonnmann@materna.de)
-// @version         0.8.11
+// @version         0.8.12
 // @include         https://myintranet.materna.de/tic/*
 // @include         https://extranet.materna.de/*/tic/*
 // @exclude         https://myintranet.materna.de/tic/report*
@@ -37,7 +37,7 @@ menu.insertAdjacentElement("afterend", zNode);
 //--- Style our newly added elements using CSS.
 GM_addStyle(multilineStr(function() {
     /*!
-        #td_TicReplace{
+        #div_TicReplace_outer{
         }
         #div_TicReplace {
             opacity:                0.9;
@@ -172,6 +172,7 @@ function bt_replaceClick(zEvent) {
     tr_replace(/\\PS/, "Übung in PowerShell");
     tr_replace(/\\Py/, "Übung in Python");
     tr_replace(/\\Tg/, "Tagesgeschäft:");
+    tr_replace(/\\Aus/, "Betreuung von Auszubildenden");
     /************\
      * Meetings *
     \************/
