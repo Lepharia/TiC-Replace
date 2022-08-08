@@ -2,7 +2,7 @@
 // @name            TiC Replace_beta
 // @namespace       tag:dennis.bonnmann@materna.de
 // @author          Dennis Bonnmann (dennis.bonnmann@materna.de)
-// @version         0.8.12
+// @version         0.8.13
 // @include         https://myintranet.materna.de/tic/*
 // @include         https://extranet.materna.de/*/tic/*
 // @exclude         https://myintranet.materna.de/tic/report*
@@ -173,6 +173,7 @@ function bt_replaceClick(zEvent) {
     tr_replace(/\\Py/, "Übung in Python");
     tr_replace(/\\Tg/, "Tagesgeschäft:");
     tr_replace(/\\Aus/, "Betreuung von Auszubildenden");
+    tr_replace(/\\Upd/, "Einspielen/Testen von Uppdates auf administrierten Systemen");
     /************\
      * Meetings *
     \************/
